@@ -6,9 +6,11 @@ export const fetcher = async (
 
     if (!res.ok) {
         const errorRes = await res.json()
-        throw new Error(
+        const error = new Error(
             errorRes.message ?? 'APIリクエスト中にエラーが発生しました',
         )
+
+        throw error
     }
 
     return res.json()
