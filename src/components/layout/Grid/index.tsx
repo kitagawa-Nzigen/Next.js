@@ -31,9 +31,9 @@ const Grid = styled(Box)<GridProps>`
   ${(props) => toPropValue('grid-auto-flow', props.gridAutoFlow, props.theme)}
   ${(props) => toPropValue('grid-auto-columns', props.gridAutoColumns, props.theme)}
   ${(props) => toPropValue('grid-auto-rows', props.gridAutoRows, props.theme)}
-  ${(props) => toPropValue('grid-template-columns', props.gridTemplateColumns, props.theme)}
-  ${(props) => toPropValue('grid-template-rows', props.gridTemplateRows, props.theme)}
-  ${(props) => toPropValue('grid-template-areas', props.gridTemplateAreas, props.theme)}
+  ${(props) => toPropValue('grid-templates-columns', props.gridTemplateColumns, props.theme)}
+  ${(props) => toPropValue('grid-templates-rows', props.gridTemplateRows, props.theme)}
+  ${(props) => toPropValue('grid-templates-areas', props.gridTemplateAreas, props.theme)}
   ${(props) => toPropValue('grid-area', props.gridArea, props.theme)}
 `
 
