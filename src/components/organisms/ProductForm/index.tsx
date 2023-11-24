@@ -28,6 +28,7 @@ interface ProductFormProps {
  * 商品投稿フォーム
  */
 const ProductForm = ({ onProductSave }: ProductFormProps) => {
+    console.log(onProductSave);
   // React Hook Formの使用
   const {
     register,

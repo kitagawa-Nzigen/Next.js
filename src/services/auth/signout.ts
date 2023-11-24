@@ -1,5 +1,5 @@
 import type { ApiContext } from 'types'
-import { fetcher } from 'utils'
+import { fetcher } from '../../utils'
 
 
 const signout = async (context: ApiContext): Promise<{ message: string }> => {

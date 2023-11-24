@@ -48,14 +48,14 @@ const Anchor = styled(Text)`
  */
 const Header = () => {
   const { cart } = useShoppingCartContext()
-  const { authUser, isLoading } = useAuthContext()
+  // const { authUser, isLoading } = useAuthContext()
 
   return (
     <HeaderRoot>
       <Flex paddingLeft={3} paddingRight={3} justifyContent="space-between">
         <Nav as="nav" height="56px" alignItems="center">
           <NavLink>
-            <Link href="/" passHref>
+            <Link href="/" passHref legacyBehavior>
               <Anchor as="a">
                 <AppLogo />
               </Anchor>
@@ -63,28 +63,28 @@ const Header = () => {
           </NavLink>
           <NavLink>
             <Box display={{ base: 'none', md: 'block' }}>
-              <Link href="/search" passHref>
+              <Link href="/search" passHref legacyBehavior>
                 <Anchor as="a">すべて</Anchor>
               </Link>
             </Box>
           </NavLink>
           <NavLink>
             <Box display={{ base: 'none', md: 'block' }}>
-              <Link href="/search/clothes" passHref>
+              <Link href="/search/clothes" passHref legacyBehavior>
                 <Anchor as="a">トップス</Anchor>
               </Link>
             </Box>
           </NavLink>
           <NavLink>
             <Box display={{ base: 'none', md: 'block' }}>
-              <Link href="/search/book" passHref>
+              <Link href="/search/book" passHref legacyBehavior>
                 <Anchor as="a">本</Anchor>
               </Link>
             </Box>
           </NavLink>
           <NavLink>
             <Box display={{ base: 'none', md: 'block' }}>
-              <Link href="/search/shoes" passHref>
+              <Link href="/search/shoes" passHref legacyBehavior>
                 <Anchor as="a">シューズ</Anchor>
               </Link>
             </Box>
@@ -93,7 +93,7 @@ const Header = () => {
         <Nav as="nav" height="56px" alignItems="center">
           <NavLink>
             <Box display={{ base: 'block', md: 'none' }}>
-              <Link href="/search" passHref>
+              <Link href="/search" passHref legacyBehavior>
                 <Anchor as="a">
                   <SearchIcon />
                 </Anchor>
@@ -101,7 +101,7 @@ const Header = () => {
             </Box>
           </NavLink>
           <NavLink>
-            <Link href="/cart" passHref>
+            <Link href="/cart" passHref legacyBehavior>
               <Anchor as="a">
                 <BadgeIconButton
                   icon={<ShoppingCartIcon size={24} />}
@@ -112,40 +112,40 @@ const Header = () => {
               </Anchor>
             </Link>
           </NavLink>
+          {/*<NavLink>*/}
+          {/*  {(() => {*/}
+          {/*    // 認証していたらアイコンを表示*/}
+          {/*    if (authUser) {*/}
+          {/*      return (*/}
+          {/*        <Link href={`/users/${authUser.id}`} passHref legacyBehavior>*/}
+          {/*          <Anchor as="a">*/}
+          {/*            <ShapeImage*/}
+          {/*              shape="circle"*/}
+          {/*              src={authUser.profileImageUrl}*/}
+          {/*              width={24}*/}
+          {/*              height={24}*/}
+          {/*              data-testid="profile-shape-image"*/}
+          {/*            />*/}
+          {/*          </Anchor>*/}
+          {/*        </Link>*/}
+          {/*      )*/}
+          {/*    } else if (isLoading) {*/}
+          {/*      // ロード中はスピナーを表示*/}
+          {/*      return <Spinner size={20} strokeWidth={2} />*/}
+          {/*    } else {*/}
+          {/*      // サインインしてない場合はアイコンを表示*/}
+          {/*      return (*/}
+          {/*        <Link href="/signin" passHref legacyBehavior>*/}
+          {/*          <Anchor as="a">*/}
+          {/*            <PersonIcon size={24} />*/}
+          {/*          </Anchor>*/}
+          {/*        </Link>*/}
+          {/*      )*/}
+          {/*    }*/}
+          {/*  })()}*/}
+          {/*</NavLink>*/}
           <NavLink>
-            {(() => {
-              // 認証していたらアイコンを表示
-              if (authUser) {
-                return (
-                  <Link href={`/users/${authUser.id}`} passHref>
-                    <Anchor as="a">
-                      <ShapeImage
-                        shape="circle"
-                        src={authUser.profileImageUrl}
-                        width={24}
-                        height={24}
-                        data-testid="profile-shape-image"
-                      />
-                    </Anchor>
-                  </Link>
-                )
-              } else if (isLoading) {
-                // ロード中はスピナーを表示
-                return <Spinner size={20} strokeWidth={2} />
-              } else {
-                // サインインしてない場合はアイコンを表示
-                return (
-                  <Link href="/signin" passHref>
-                    <Anchor as="a">
-                      <PersonIcon size={24} />
-                    </Anchor>
-                  </Link>
-                )
-              }
-            })()}
-          </NavLink>
-          <NavLink>
-            <Link href="/sell" passHref>
+            <Link href="/sell" passHref legacyBehavior>
               <Button as="a">出品</Button>
             </Link>
           </NavLink>

@@ -12,10 +12,10 @@ const Layout = ({ children }: LayoutProps) => {
     <>
       <Header />
       <main>{children}</main>
-      <Separator />
-      <Box padding={3}>
-        <Footer />
-      </Box>
+      {/*<Separator />*/}
+      {/*<Box padding={3}>*/}
+      {/*  <Footer />*/}
+      {/*</Box>*/}
     </>
   )
 }
